@@ -1,3 +1,45 @@
 /* main.scss */
 @import "bootstrap";
 @import "bootstrap/theme";
+
+.roundedButton {
+    background: #5e3cb3;
+ /*   width: 150px; */
+    height: 40px; 
+    border-radius: 25px;
+    padding: 5px;
+    color: #ffffff;
+    text-align: left;
+    font-size: 11px;
+    position: relative;
+    margin-top: 500px;
+    
+}
+
+.header {
+    height: 600px;
+    background-image: url('../../src/img/top-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    height: 20px;
+    background-size: contain;
+    float: left;
+    margin-top: 4px;
+    margin-left: 15px;
+
+}
+
+.roundedButton span {
+    padding: 8px;
+}
+
+.surface {
+    position: relative;
+    margin-top: 40px;
+    size: 50px;
+    font-weight: 700;
+    color: #ffffff;
+}

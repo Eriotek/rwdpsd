@@ -2,7 +2,9 @@
 var 
     gulp = require('gulp'),
     sass = require('gulp-sass'),
-    sourcemaps = require('gulp-sourcemaps');
+    sourcemaps = require('gulp-sourcemaps'),
+    browserSync = require('browser-sync').create(),
+    reload = browserSync.reload;
 
 // source and distribution folder
 var
@@ -49,7 +51,18 @@ gulp.task('sass', ['fonts'], function () {
         .pipe(gulp.dest(scss.out));
 });
 
+gulp.task('browser-sync', function() {
+
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+    gulp.watch( scss.in , ['sass'] );
+    gulp.watch("*.html").on('change', reload);
+});
+
 // default task
-gulp.task('default', ['sass'], function () {
+gulp.task('default', ['sass', 'browser-sync'], function () {
      gulp.watch(scss.watch, ['sass']);
 });
