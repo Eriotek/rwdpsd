@@ -5,15 +5,21 @@
 .roundedButton {
     background: #5e3cb3;
  /*   width: 150px; */
-    height: 40px; 
-    border-radius: 25px;
+    height: 45px; 
+    border-radius: 30px;
     padding: 5px;
     color: #ffffff;
     text-align: left;
-    font-size: 11px;
+    font-size: 9px;
     position: relative;
-    margin-top: 500px;
+    margin-top: 270px;
+    margin-left: 10px;
     
+}
+
+.roundedButton span {
+    padding-top: 5px;
+    font-size: 0.6em;
 }
 
 .header {
@@ -21,25 +27,55 @@
     background-image: url('../../src/img/top-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: 30% 0%;
 }
 
 .logo {
     height: 20px;
     background-size: contain;
     float: left;
-    margin-top: 4px;
-    margin-left: 15px;
-
-}
-
-.roundedButton span {
-    padding: 8px;
+    margin: 5px 5px 0 5px;
 }
 
 .surface {
     position: relative;
-    margin-top: 40px;
-    size: 50px;
-    font-weight: 700;
-    color: #ffffff;
+    text-align: center;
+    display: block;    
+    margin: 0 auto;
+    margin-top: 30px;
 }
+
+.title1 {
+    position: relative;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    top: 100px;
+}
+
+.title2 {
+    position: relative;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    top: 115px;
+    margin-left: 40px;
+
+}
+
+.head-menu {
+    color: #5e3cb3;
+    word-spacing: 20px;
+    text-align: center;
+    font-weight: 200;
+}
+
+ul.head li {
+    list-style-type: none;
+    display: inline-block;
+    color: #5e3cb3;
+    font-weight: bold;
+    margin-top: 5px;
+    padding-right: 5px;
+}
+
