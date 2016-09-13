@@ -48,10 +48,12 @@ gulp.task('sass', ['fonts'], function () {
         .pipe(sourcemaps.init())
         .pipe(sass(scss.sassOpts))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(scss.out));
+        .pipe(browserSync.stream())
+        .pipe(gulp.dest(scss.out))
+        .pipe(reload({stream:true}));
 });
 
-gulp.task('browser-sync', function() {
+gulp.task('serve', ['sass'], function() {
 
     browserSync.init({
         server: {
@@ -63,6 +65,6 @@ gulp.task('browser-sync', function() {
 });
 
 // default task
-gulp.task('default', ['sass', 'browser-sync'], function () {
+gulp.task('default', ['serve'], function () {
      gulp.watch(scss.watch, ['sass']);
 });

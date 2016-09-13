@@ -5,12 +5,12 @@
 .roundedButton {
     background: #5e3cb3;
  /*   width: 150px; */
-    height: 45px; 
+    height: 40px; 
     border-radius: 30px;
     padding: 5px;
     color: #ffffff;
     text-align: left;
-    font-size: 9px;
+    font-size: 8px;
     position: relative;
     margin-top: 270px;
     margin-left: 10px;
@@ -18,8 +18,18 @@
 }
 
 .roundedButton span {
-    padding-top: 5px;
-    font-size: 0.6em;
+    margin-top: 15px;
+}
+
+.logo {
+    height: 17px;
+    background-size: contain;
+    float: left;
+    margin: 5px 5px 0 15px;
+}
+
+.logotyp {
+    height: 26px;
 }
 
 .header {
@@ -30,12 +40,7 @@
     background-position: 30% 0%;
 }
 
-.logo {
-    height: 20px;
-    background-size: contain;
-    float: left;
-    margin: 5px 5px 0 5px;
-}
+
 
 .surface {
     position: relative;
@@ -71,11 +76,71 @@
 }
 
 ul.head li {
+    text-align: center;
     list-style-type: none;
     display: inline-block;
     color: #5e3cb3;
-    font-weight: bold;
     margin-top: 5px;
     padding-right: 5px;
+}
+
+.whiterow {
+    background-color: #ffffff;
+    height: 300px;
+}
+
+.greyrow {
+    background-color: #F5F4F9;
+    height: 280px;
+}
+
+.greytext {
+    color: E8E8E8;
+    opacity: 0.15;
+    font-weight: bold;
+    font-size: 50px;
+    padding-left: 20px;
+}
+
+.playerimg {
+    height: 270px;
+    position: absolute;
+    z-index: 1;
+}
+
+.topimg {
+      top: 680px;
+      left: 80px;
+ }
+
+.middleimg {
+    height: 240px;
+    top: 1290px;
+    left: 8px;
+}
+
+h2.greytext {
+    font-weight: bolder;
+    font-size: 25px;
+    opacity: 0.4;
+    padding-left: 6px;
+    display: inline-block;
+    margin-top: 70px;
+}
+
+ .grey {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bolder;
+    border-bottom: 6px solid #5e3cb3;
+    border-radius: 2px;
+    display: inline-block;
+    margin-left: 20px;
+
+}
+
+.text {
+    font-size: 16px;
+    margin: 10px 10px;
 }
 
