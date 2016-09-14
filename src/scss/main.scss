@@ -2,23 +2,8 @@
 @import "bootstrap";
 @import "bootstrap/theme";
 
-$xs-min: "only screen and (min-width:none)";
-$xs-max: "only screen and (max-width:520px)";
-$xs-sm: "only screen (min-width: none) and (max-width:767px)";
 
-$sm-min: "only screen and (min-width:768px)";
-$sm-max: "only screen and (max-width:991px)";
-$sm-md: "only screen (min-width: 768px) and (max-width:991px)";
-
-$md-min: "only screen and (min-width:992px)";
-$md-max: "only screen and (max-width:1199px)";
-$md-lg: "only screen (min-width: 992px) and (max-width:1199px)";
-
-$lg-min: "only screen and (min-width:1200px)";
-$lg-max: "only screen and (max-width:none)";
-
-
-@media #{$xs-sm} {
+@media(min-width:0px) {
     .roundedButton {
     background: #5e3cb3;
     height: 40px; 
@@ -28,19 +13,11 @@ $lg-max: "only screen and (max-width:none)";
     text-align: left;
     font-size: 8px;
     position: relative;
-    margin-top: 270px;
+    margin-top: 215px;
     margin-left: 10px;
     }
 
-
-}
-
-@media #{$sm-md} {
-        margin-top: 790px;
-    }
-
-
-.roundedButton span {
+    .roundedButton span {
     margin-top: 15px;
 }
 
@@ -63,19 +40,12 @@ $lg-max: "only screen and (max-width:none)";
     background-position: 37% 0%;
 }
 
-
-
 .surface {
     position: relative;
     text-align: center;
     display: block;    
     margin: 0 auto;
     margin-top: 30px;
-
-    @media #{$sm-md} {
-        text-align: left;
-        margin-left: 20px;
-        }
 }
 
 .title1 {
@@ -93,7 +63,6 @@ $lg-max: "only screen and (max-width:none)";
     font-weight: bold;
     top: 115px;
     margin-left: 40px;
-
 }
 
 .head-menu {
@@ -106,9 +75,6 @@ $lg-max: "only screen and (max-width:none)";
 ul.head {
     padding-left: 0px;
     padding-top: 15px;
-    @media #{$sm-md} {
-        margin-top: -100px;
-        }
      li {
         text-align: center;
         list-style-type: none;
@@ -172,10 +138,163 @@ h2.greytext {
     display: inline-block;
     margin-left: 20px;
 
-}
+} 
 
 .text {
     font-size: 16px;
     margin: 10px 10px;
 }
+.toptext {
+    margin-top: 55px;
+    color: #ffffff;
+    visibility: hidden;
+}
+}
 
+@media(min-width:768px) {
+    .roundedButton {
+    background: #5e3cb3;
+    height: 70px; 
+    border-radius: 60px;
+    padding: 20px;
+    color: #ffffff;
+    text-align: left;
+    font-size: 13px;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 450px;
+    }
+
+    .logo {
+    height: 27px;
+    background-size: contain;
+    float: left;
+    margin: 5px 10px 0 25px;
+}
+
+    .surface{
+            text-align: left;
+            margin: 55px auto auto 30px;
+        }
+    ul.head {
+        margin-top: -200px;
+        margin-left: 45px;
+        }
+
+    .header {
+        height: 900px;
+        }
+
+    .title1 {
+        margin-left: 80px;
+        font-size: 48px;
+        top: 200px;
+    }
+
+    .title2 {
+        font-size: 48px;
+        top: 200px;
+        margin-left: 155px;
+    }
+
+    .topimg {
+      height: 600px;
+      top: 990px;
+      left: -150px;
+ }
+
+ h2.greytext {
+    font-weight: bolder;
+    font-size: 25px;
+    margin-top: 70px;
+}
+
+.greytext {
+    font-weight: bold;
+    font-size: 70px;
+    padding-left: 300px;
+    margin-top: 80px;
+}
+
+.whiterow {
+    height: 350px;
+}
+
+.toptext{ 
+    visibility: visible;
+}
+
+
+ }
+
+ @media(min-width:1200px) {
+
+    .roundedButton {
+    height: 70px; 
+    border-radius: 60px;
+    padding: 20px;
+    font-size: 13px;
+    margin-left: 10px;
+    margin-top: 450px;
+    }
+
+    .logo {
+    height: 27px;
+    background-size: contain;
+    float: left;
+    margin: 5px 10px 0 25px;
+}
+
+    .surface{
+            text-align: left;
+            margin: 55px auto auto 30px;
+        }
+    ul.head {
+        margin-top: -200px;
+        margin-left: 45px;
+        }
+
+    .header {
+        height: 960px;
+        }
+
+    .title1 {
+        margin-left: 180px;
+        font-size: 60px;
+        top: 200px;
+    }
+
+    .title2 {
+        font-size: 60px;
+        top: 200px;
+        margin-left: 420px;
+    }
+
+    .topimg {
+      height: 600px;
+      top: 990px;
+      left: -150px;
+ }
+
+ h2.greytext {
+    font-weight: bolder;
+    font-size: 25px;
+    margin-top: 70px;
+}
+
+.greytext {
+    font-weight: bold;
+    font-size: 70px;
+    padding-left: 300px;
+    margin-top: 80px;
+}
+
+.whiterow {
+    height: 350px;
+}
+
+.toptext{ 
+    visibility: visible;
+}
+
+ }
