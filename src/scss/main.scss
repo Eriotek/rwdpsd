@@ -2,9 +2,25 @@
 @import "bootstrap";
 @import "bootstrap/theme";
 
-.roundedButton {
+$xs-min: "only screen and (min-width:none)";
+$xs-max: "only screen and (max-width:520px)";
+$xs-sm: "only screen (min-width: none) and (max-width:767px)";
+
+$sm-min: "only screen and (min-width:768px)";
+$sm-max: "only screen and (max-width:991px)";
+$sm-md: "only screen (min-width: 768px) and (max-width:991px)";
+
+$md-min: "only screen and (min-width:992px)";
+$md-max: "only screen and (max-width:1199px)";
+$md-lg: "only screen (min-width: 992px) and (max-width:1199px)";
+
+$lg-min: "only screen and (min-width:1200px)";
+$lg-max: "only screen and (max-width:none)";
+
+
+@media #{$xs-sm} {
+    .roundedButton {
     background: #5e3cb3;
- /*   width: 150px; */
     height: 40px; 
     border-radius: 30px;
     padding: 5px;
@@ -14,8 +30,15 @@
     position: relative;
     margin-top: 270px;
     margin-left: 10px;
-    
+    }
+
+
 }
+
+@media #{$sm-md} {
+        margin-top: 790px;
+    }
+
 
 .roundedButton span {
     margin-top: 15px;
@@ -37,7 +60,7 @@
     background-image: url('../../src/img/top-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 30% 0%;
+    background-position: 37% 0%;
 }
 
 
@@ -48,6 +71,11 @@
     display: block;    
     margin: 0 auto;
     margin-top: 30px;
+
+    @media #{$sm-md} {
+        text-align: left;
+        margin-left: 20px;
+        }
 }
 
 .title1 {
@@ -75,13 +103,20 @@
     font-weight: 200;
 }
 
-ul.head li {
-    text-align: center;
-    list-style-type: none;
-    display: inline-block;
-    color: #5e3cb3;
-    margin-top: 5px;
-    padding-right: 5px;
+ul.head {
+    padding-left: 0px;
+    padding-top: 15px;
+    @media #{$sm-md} {
+        margin-top: -100px;
+        }
+     li {
+        text-align: center;
+        list-style-type: none;
+        display: inline-block;
+        color: #9966ff;
+        margin-top: 5px;
+        padding-right: 5px;
+        }
 }
 
 .whiterow {
