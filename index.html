@@ -3,8 +3,11 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="src/scripts/bootstrap.js"></script>
     <title>Cssy fajne som</title>
     <link rel="stylesheet" href="dist/css/main.css">
+
 </head>
 
 <body>
@@ -26,7 +29,7 @@
                 <div class="row">
                     <div class="roundedButton col-xs-5 col-sm-4 col-sm-push-1 col-lg-3 col-lg-push-2">
                         <span><img src="src/img/apple.png" class="logo"></span>DOWNLOAD ON THE<br>
-                        <strg>APP STORE</strong>
+                        <strong>APP STORE</strong>
                     </div>
                     <div class="roundedButton col-xs-5 col-sm-4 col-sm-push-2 col-lg-3 col-lg-push-3">
                         <span><img src="src/img/googleplay.png" class="logo"></span>GET IT ON<br> <strong>GOOGLE PLAY</strong>
@@ -44,19 +47,21 @@
             </div>
         </div>
 
-
         <div class="row">
             <img src="src/img/player2.png" class="playerimg topimg">
-
             <div class="whiterow col-xs-12">
                 <h1 class="greytext">ATHLETS</h1>
+                <h3 class="grey hidden-xs">01</h3>
+                <h2 class="greytext hidden-xs">CONNECTION</h2>
+                <div class="text athl hidden-xs"> Connect with coaches directly. You can ping </div>
             </div>
 
         </div>
         <div class="row">
             <div class="greyrow col-xs-12">
-                <h2 class="greytext"><span class="grey">02</span>COLLABORATION </h2>
-                <div class="text">
+                <h3 class="grey">02</h3>
+                <h2 class="greytext">COLLABORATION </h2>
+                <div class="text athl">
                     Work with other student athlets to increase visability. When you share and like other players videos it will increase your
                     visability as a player. This is the team work aspect to Surface 1.
                 </div>
@@ -65,26 +70,131 @@
 
         <div class="row">
             <div class="purplerow col-xs-12 hidden-xs">
-            </div>
-        </div>
-        <div class="row">
-            <img src="src/img/player1.png" class="playerimg middleimg">
-            <div class="whiterow col-xs-12">
-                <h1 class="greytext">PLAYERS</h1>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="greyrow col-xs-12">
-                <h3 class="grey">03</h3>
-                <h2 class="greytext">GROWTH </h2>
-                <div class="text"> Save your time, recruit proper athlets for your team.</div>
-            </div>
-        </div>  
-        <div class="row">
-                <div class="bluerow col-xs-12 hidden-xs">
+                <div class="growth">
+                    <h3 class="grey">03</h3>
+                    <h2 class="greytext">GROWTH </h2>
+                    <div class="text athl"> Save your time, recruit proper athlets for your team.</div>
                 </div>
             </div>
+        </div>
+        <div class="row hideit">
+            <div class="row">
+                <div class="col-xs-12">
+                    <img src="src/img/player1.png" class="playerimg middleimg">
+                </div>
+                <div class="whiterow col-xs-12 players">
+                    <h1 class="greytext">PLAYERS</h1>
+                    <h3 class="grey hidden-xs">01</h3>
+                    <h2 class="greytext hidden-xs">CONNECTION</h2>
+                    <div class="text hidden-xs"> Connect with talented athlete directly, you can watch their skills through video showreels directly from
+                        Surface1. </div>
+                </div>
+
+                <div class="row">
+                    <div class="greyrow col-xs-12 players">
+                        <div class="growth hidden-sm hidden-md hidden-lg col-xs-12">
+                            <h3 class="grey">03</h3>
+                            <h2 class="greytext">GROWTH </h2>
+                            <div class="text"> Save your time, recruit proper athlets for your team.</div>
+                        </div>
+                        <div class="colla hidden-xs">
+                            <h3 class="grey">02</h3>
+                            <h2 class="greytext">COLLABORATION </h2>
+                            <div class="text">
+                                Work with recruiter to increase your chances of finding talented athlete.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="bluerow col-xs-12 hidden-xs">
+                    <div class="growth players hidden-xs">
+                        <h3 class="grey">03</h3>
+                        <h2 class="greytext">GROWTH </h2>
+                        <div class="text">
+                            Save your time, recruit proper athlets for your team
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-xs-12">
+                <h1>Bootstrap tab panel example (using nav-pills) </h1>
+            </div>
+            <div id="exTab1">
+                <ul class="nav nav-pills">
+                    <li class="active">
+                        <a href="#1a" data-toggle="tab">Mapa</a>
+                    </li>
+                    <li><a href="#2a" data-toggle="tab">Formularz</a>
+                    </li>
+                    <li><a href="#3a" data-toggle="tab">Modal</a>
+                    </li>
+                    <li><a href="#4a" data-toggle="tab">Background color</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content clearfix">
+                    <div class="tab-pane active fade in" id="1a">
+                        <h3>Tu miala byc mapa ale nie dzialalo</h3>
+                    </div>
+                    <div class="tab-pane fade" id="2a">
+                        <h3>Zglos uwagi - formularz</h3>
+                        <button class="btn btn-primary btn-lg"> Wyslij</button>
+                        <div class="form-group col-xs-8">
+                            <form>
+                                <label for="email">Twoj Email</label>
+                                <input type="email" class="form-control" placeholder="Wpisz swoj email">
+                            </form>
+
+                            <label for="comment">Uwagi</label>
+                            <textarea class="form-control" rows="4" id="comment"></textarea>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="3a">
+                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Modal</button>
+            <!-- Modal -->                        
+                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h4 class="modal-title">Addition</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-group text-center">
+                                            <label>
+                                <input type="text" id="l1" class="form-control">
+                            </label>
+                                            <span>+</span>
+                                            <label>
+                                <input id="l2" type="text" class="form-control">
+                            </label>
+                                            <label>
+                                Wynik <input readonly="readonly" class="form-control" id="res">
+                            </label>
+                                        </form>
+                                        <button class="btn btn-success center-block" id="btnRes">Dodaj</button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="4a">
+                        <h3>We use css to change the background color of the content to be equal to the tab</h3>
+                    </div>
+                </div>
+            </div>
+            <div id="map"></div>
+        </div>
         <footer>
             <div class="row">
                 <div class="footer col-xs-12">
@@ -103,13 +213,13 @@
                             <span><img src="src/img/googleplay.png" class="logo"></span>GET IT ON<br> <strong>GOOGLE PLAY</strong>
                         </div>
                     </div>
-                        <div class="row ft-bar">
-                            <div class="center-block col-xs-6 col-xs-push-4 col-lg-push-5">
+                    <div class="row ft-bar">
+                        <div class="center-block col-xs-6 col-xs-push-4 col-lg-push-5">
                             <img src="src/img/fb-logo.png" class="ft-logo">
                             <img src="src/img/twitter-xxl.png" class="ft-logo">
                             <img src="src/img/instagram.png" class="ft-logo">
-                            </div>
                         </div>
+                    </div>
                 </div>
             </div>
 
@@ -117,5 +227,7 @@
     </div>
 
 </body>
+<script src="src/scripts/script.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 
 </html>

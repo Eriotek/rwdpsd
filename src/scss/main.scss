@@ -5,6 +5,7 @@
 
 
 @media(min-width:0px) {
+
     .roundedButton {
     background: #5e3cb3;
     height: 40px; 
@@ -18,10 +19,76 @@
     margin-left: 10px;
     }
 
+    .hideit {
+        overflow: hidden;
+    }
+
     .roundedButton span {
     margin-top: 15px;
 }
 
+label {
+    padding-top: 15px;
+    font-size: 18px;
+}
+
+#map {
+    height: 500px;
+    padding: 0px;
+}
+
+#extTab1 {
+    padding-left: 10px;
+}
+
+#exTab1 .tab-content {
+  color : white;
+  background-color: #5e3cb3;
+  padding : 5px 15px;
+}
+
+
+#exTab2 h3 {
+  color : white;
+  background-color: #5e42B0;
+  padding : 5px 15px;
+}
+
+/* remove border radius for the tab */
+
+#exTab1 .nav-pills > li > a {
+  border-radius: 0;
+}
+
+/* change border radius for the tab , apply corners on top*/
+
+#exTab3 .nav-pills > li > a {
+  border-radius: 4px 4px 0 0 ;
+}
+
+#exTab3 .tab-content {
+  color : white;
+  background-color: #5e42B0;
+  padding : 5px 15px;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background-color: #5e42B0
+}
+
+a {
+    color: #5e3cb3;
+}
+
+div .btn-primary {
+    background-image: linear-gradient(to bottom, #9966ff 0%, #265a88 100%);
+    border-color: #245580;
+    margin: 90px 0px 0px 70px;
+}
+
+#3a .btn {
+    margin: 0 auto;
+}
 .logo {
     height: 17px;
     background-size: contain;
@@ -117,7 +184,7 @@ ul.head {
 
 .middleimg {
     height: 240px;
-    top: 1290px;
+    top: 90px;
     left: 8px;
 }
 
@@ -149,6 +216,7 @@ h2.greytext {
 .text {
     font-size: 16px;
     margin: 10px 10px;
+
 }
 .toptext {
     margin-top: 55px;
@@ -269,12 +337,21 @@ h2.greytext {
       top: 990px;
       left: -190px;
  }
+
+    .middleimg {
+    height: 550px;
+    top: 30px;
+    left: 340px;
+}
  
 
  h2.greytext {
     font-weight: bolder;
     font-size: 25px;
-    margin-top: 70px;
+    margin-top: 35px;
+}
+.grey {
+    margin-left: 300px;
 }
 
 .greytext {
@@ -283,6 +360,48 @@ h2.greytext {
     padding-left: 300px;
     margin-top: 80px;
 }
+
+.text {
+    font-size: 18px;
+}
+.athl {
+    margin-left: 300px;
+}
+
+.players {
+    margin-left: 20px;
+    .greytext{
+        padding-left: 5px;
+    }
+    .grey {
+        margin-left: 20px;
+    }
+    .text {
+        padding-right: 350px;
+    }
+}
+
+.growth {
+    margin-top: 0px;
+    color: #C1C1F1;
+    .greytext{
+        opacity: 1;
+    }
+    .text {
+        color: white;
+    }
+    .grey {
+         border-bottom: 6px solid #ffffff;
+         color: #000000;
+    }
+}
+
+.growth.players {
+    .grey {
+        color: #9966ff;
+    }
+}
+
 
 .whiterow {
     height: 350px;
@@ -297,6 +416,7 @@ h2.greytext {
     height: 205px;
 }
 .toptext {
+    font-size: 15px;
     padding-left: 70px; 
     visibility: visible;
 
@@ -354,26 +474,43 @@ h2.greytext {
     }
 
     .topimg {
-      height: 600px;
+      height: 970px;
       top: 990px;
-      left: -150px;
+      left: 320px;
  }
+
+.athl {
+    margin-left: 1100px;
+}
+
+.grey {
+    margin-left: 1100px;
+}
+
 
  h2.greytext {
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 35px;
     margin-top: 70px;
 }
 
 .greytext {
     font-weight: bold;
-    font-size: 70px;
-    padding-left: 300px;
+    font-size: 90px;
+    padding-left: 1100px;
     margin-top: 80px;
 }
 
 .whiterow {
-    height: 350px;
+    height: 405px;
+}
+
+.greyrow {
+    height: 264px;
+}
+
+.purplerow {
+    height: 295px;
 }
 
 .toptext{ 
@@ -381,6 +518,24 @@ h2.greytext {
 }
 #hockey {
     width: 9.4%;
+}
+
+.text {
+    font-size: 25px;
+}
+
+.middleimg {
+    top: 0px;
+    left: 800px;
+    height: 800px;
+}
+
+.whiterow.players {
+    height: 445px;
+}
+
+.bluerow {
+    height: 265px;
 }
 
  }
