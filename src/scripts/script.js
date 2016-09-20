@@ -1,4 +1,9 @@
 
+$(document).ready(function () {
+    addition();
+    tooltip();
+});
+
 //Mapa
 function myMap() {
   var mapCanvas = document.getElementById("map");
@@ -17,3 +22,41 @@ function myMap() {
           title: 'Tu Narazie jest sciernisko'
           });
 }
+
+function addition() {
+    var num1 = $("#l1");
+    var num2 = $("#l2");
+    var res = $("#res");
+    var button = $("#btnRes");
+    
+    button.click(function () {
+        res.val(parseInt(num1.val()) + parseInt(num2.val()));
+    });
+
+}
+function tooltip() {
+    $('[data-toggle="tooltip"]').tooltip();  
+}
+
+// function validate() {
+//   $("form[name='formu']").validate({
+//     rules: {
+//       name: {
+//         required: true,
+//         minlength: 5
+//       },
+//       email: {
+//         required: true,
+//         email: true
+//     },
+//       messages: {
+//       name: "Please enter your Name",
+//       email: "Please enter a valid email address"
+//     },
+//     // Make sure the form is submitted to the destination defined
+//     // in the "action" attribute of the form when valid
+//     submitHandler: function(form) {
+//       form.submit();
+//     }
+//     }});
+// }

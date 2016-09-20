@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="src/scripts/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
     <title>Cssy fajne som</title>
     <link rel="stylesheet" href="dist/css/main.css">
 
@@ -122,7 +123,7 @@
         <div class="row">
 
             <div class="col-xs-12">
-                <h1>Bootstrap tab panel example (using nav-pills) </h1>
+                <h1>Zadania :) </h1>
             </div>
             <div id="exTab1">
                 <ul class="nav nav-pills">
@@ -133,31 +134,38 @@
                     </li>
                     <li><a href="#3a" data-toggle="tab">Modal</a>
                     </li>
-                    <li><a href="#4a" data-toggle="tab">Background color</a>
+                    <li><a href="#4a" data-toggle="tab">Carousel</a>
                     </li>
                 </ul>
 
                 <div class="tab-content clearfix">
                     <div class="tab-pane active fade in" id="1a">
-                        <h3>Tu miala byc mapa ale nie dzialalo</h3>
+                        <h3>Oto mapa</h3>
                     </div>
                     <div class="tab-pane fade" id="2a">
                         <h3>Zglos uwagi - formularz</h3>
-                        <button class="btn btn-primary btn-lg"> Wyslij</button>
-                        <div class="form-group col-xs-8">
-                            <form>
-                                <label for="email">Twoj Email</label>
-                                <input type="email" class="form-control" placeholder="Wpisz swoj email">
-                            </form>
-
-                            <label for="comment">Uwagi</label>
-                            <textarea class="form-control" rows="4" id="comment"></textarea>
-                        </div>
+                        <form id="formu" data-toggle="validator" role="form">
+                            <button type="submit" class="btn btn-primary btn-lg" data-toggle="tooltip" data-placement="right" title="Klkiknij aby wyslac formularz"> Wyslij</button>
+                            <div class="col-xs-8">
+                            <div class="form-group">
+                                <label for="name"> Imie I nazwisko</label>
+                                <input type="text" name="name" id="email" class="form-control" placeholder="np. Jan Kowalski" required data-error="Uzupelnij pole">
+                                        <div class="help-block with-errors"></div>
+                            </div> 
+                                <div class="form-group">
+                                    <label for="email">Twoj Email</label>
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="Wpisz swoj email" data-error="Niepoprawny email" required>
+                                            <div class="help-block with-errors"></div>
+                                </div>
+                                <label for="comment">Uwagi</label>
+                                <textarea class="form-control" id="comment" rows="4" id="comment"></textarea>
+                            </div>                       
+                        </form>
                     </div>
                     <div class="tab-pane fade" id="3a">
-                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Modal</button>
-            <!-- Modal -->                        
-                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <button id="modal-btn" class="btn btn-primary btn-lg center-block" data-toggle="modal" data-target="#myModal">Modal</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -167,7 +175,7 @@
                                     <div class="modal-body">
                                         <form class="form-group text-center">
                                             <label>
-                                <input type="text" id="l1" class="form-control">
+                                <input id="l1" type="text" class="form-control">
                             </label>
                                             <span>+</span>
                                             <label>
@@ -187,43 +195,82 @@
                             </div>
                             <!-- /.modal-dialog -->
                         </div>
+                        <!-- /.modal -->
                     </div>
                     <div class="tab-pane fade" id="4a">
-                        <h3>We use css to change the background color of the content to be equal to the tab</h3>
-                    </div>
-                </div>
-            </div>
-            <div id="map"></div>
-        </div>
-        <footer>
-            <div class="row">
-                <div class="footer col-xs-12">
-                    <div class="row">
-                        <img src="src/img/footer-lg.jpg" class="ft-lg center-block">
-                    </div>
-                    <div class="row">
-                        <img src="src/img/footer-logotyp.png" class="ft-logotyp center-block">
-                    </div>
-                    <div class="row">
-                        <div class="roundedButton ft-button col-xs-5 col-sm-4 col-sm-push-1 col-lg-3 col-lg-push-2">
-                            <span><img src="src/img/apple.png" class="logo"></span>DOWNLOAD ON THE<br>
-                            <strg>APP STORE</strong>
-                        </div>
-                        <div class="roundedButton ft-button col-xs-5 col-sm-4 col-sm-push-2 col-lg-3 col-lg-push-3">
-                            <span><img src="src/img/googleplay.png" class="logo"></span>GET IT ON<br> <strong>GOOGLE PLAY</strong>
-                        </div>
-                    </div>
-                    <div class="row ft-bar">
-                        <div class="center-block col-xs-6 col-xs-push-4 col-lg-push-5">
-                            <img src="src/img/fb-logo.png" class="ft-logo">
-                            <img src="src/img/twitter-xxl.png" class="ft-logo">
-                            <img src="src/img/instagram.png" class="ft-logo">
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                            </ol>
 
-        </footer>
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+
+                                <div class="item active">
+                                    <img src="src/img/blackman1.png" alt="Chania" width="460" height="345">
+                                    <div class="carousel-caption">
+                                        <h3>A man with a phone</h3>
+                                        <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <img src="src/img/blackman2.png" alt="Chania" width="460" height="345">
+                                    <div class="carousel-caption">
+                                        <h3>Another man</h3>
+                                        <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Left and right controls -->
+                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
+    <footer>
+        <div class="row">
+            <div class="footer col-xs-12">
+                <div class="row">
+                    <img src="src/img/footer-lg.jpg" class="ft-lg center-block">
+                </div>
+                <div class="row">
+                    <img src="src/img/footer-logotyp.png" class="ft-logotyp center-block">
+                </div>
+                <div class="row">
+                    <div class="roundedButton ft-button col-xs-5 col-sm-4 col-sm-push-1 col-lg-3 col-lg-push-2">
+                        <span><img src="src/img/apple.png" class="logo"></span>DOWNLOAD ON THE<br>
+                        <strg>APP STORE</strong>
+                    </div>
+                    <div class="roundedButton ft-button col-xs-5 col-sm-4 col-sm-push-2 col-lg-3 col-lg-push-3">
+                        <span><img src="src/img/googleplay.png" class="logo"></span>GET IT ON<br> <strong>GOOGLE PLAY</strong>
+                    </div>
+                </div>
+                <div class="row ft-bar">
+                    <div class="center-block col-xs-6 col-xs-push-4 col-lg-push-5">
+                        <img src="src/img/fb-logo.png" class="ft-logo">
+                        <img src="src/img/twitter-xxl.png" class="ft-logo">
+                        <img src="src/img/instagram.png" class="ft-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
     </div>
 
 </body>
